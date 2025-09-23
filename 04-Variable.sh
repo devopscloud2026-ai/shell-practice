@@ -1,5 +1,6 @@
 #!/bin/bash
-# No space before and after equal
+
+# No spece after and before eequal
 Person1=John
 Person2=Raheem
 
