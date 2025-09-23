@@ -5,7 +5,7 @@
  sleep 10
 
  END_TIME=$(date+%s)
- 
- TOTAL_TIME=$(($START_TIME-$END_TIME))
 
- echo "Script Executed in: $TOTAL_TIME SECONDs"
+ TOTAL_TIME=$(($END_TIME-$START_TIME))
+
+ echo "Script Executed in: $TOTAL_TIME SECONDS"
