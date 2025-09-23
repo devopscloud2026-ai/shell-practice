@@ -2,3 +2,4 @@
 
 LEADERS=("Modi" "Putin" "Trudo" "Trimp")
 
+echo "All leaders: ${{LEADERS} [@]}
