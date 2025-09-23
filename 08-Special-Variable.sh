@@ -7,4 +7,3 @@ echo "User Name is: $USER"
 echo "Script name is: $0"
 
 
-echo "PID of last command in background: $@" 
