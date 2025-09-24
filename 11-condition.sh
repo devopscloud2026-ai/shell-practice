@@ -7,6 +7,6 @@ if [$NUMBER -lt 10]; then
 
 else
     echo "Given number $NUMBER is lessthan or equal to 10"
-f1
+fi
 
  
