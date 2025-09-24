@@ -24,4 +24,4 @@ VALIDATE(){
     VALIDATE $? "Nginx"
 
     dnf install mongodb-mongosh -y
-    VALIDATE $? "Mongosh
+    VALIDATE $? "Mongosh"
