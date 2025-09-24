@@ -26,6 +26,7 @@ VALIDATE(){
    VALIDATE $? "MYSQL"
    else
     echo "Already Mysql exist....$G SKIPPING $N"
+    fi
 
     dnf list installed nginx
     if [$? -ne 0 ]; then
@@ -33,6 +34,7 @@ VALIDATE(){
     VALIDATE $? "Nginx"
     else
      echo "Already Nginx exist....$G SKIPPING $N"
+     fi
 
     dnf list installed python3
     if [$? -ne 0 ]; then
@@ -40,3 +42,4 @@ VALIDATE(){
     VALIDATE $? "python"
     else
     echo "Already python3 exist....$G SKIPPING $N"
+    fi
