@@ -2,5 +2,5 @@
 
 for i in {1..5};
     do
-        echo $I
+        echo $i
     done
