@@ -6,6 +6,13 @@ G="e\[32m"
 Y="e\[33m"
 N="e\[0m"
 
+LOGS_FOLDER="/var/log/shell-script"
+SCRIPT_NAME=$( echo $0 | cut -d "." -f1 )
+LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
+
+mkdir -p $LOGS_FOLDER
+echo "script start executed at: $(date)"
+
 if [ $USERID -ne 0 ]; then
     echo "ERROR:: Please run this script with root Privelege"
     exit 1
@@ -20,7 +27,7 @@ VALIDATE(){
     fi
     
 }
-        dnf list installed mysql
+        dnf list installed mysql &>>$LOG_FILE
     if [ $? -ne 0 ]; then
         dnf install mysql -y
         VALIDATE $? "MYSQL"
@@ -28,7 +35,7 @@ VALIDATE(){
         echo -e "Mysql already exist....$Y SKIPPING $N"
     fi
 
-        dnf list installed nginx
+        dnf list installed nginx &>>$LOG_FILE
     if [ $? -ne 0 ]; then
         dnf install nginx -y
         VALIDATE $? "Nginx"
@@ -36,10 +43,11 @@ VALIDATE(){
         echo -e "Nginx Already exist....$Y SKIPPING $N"
      fi
 
-        dnf list installed python3
+        dnf list installed python3 &>>$LOG_FILE
     if [ $? -ne 0 ]; then
         dnf install python3 -y
         VALIDATE $? "python"
     else
         echo -e "Python Already exist....$Y SKIPPING $N"
     fi
+
