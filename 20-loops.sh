@@ -24,6 +24,7 @@ VALIDATE(){
         echo -e "Installing $2...$G success $N"
     fi
 }
+
 for package in $@
 do 
    echo "package is: $Package"
