@@ -1,5 +1,5 @@
 #!/bin/bash
 
-echo "Please enter your PIN_NUMBER"
+echo "Please enter your PIN number"
 read -s PIN_NUMBER
-echo "PIN nmuber is: $PIN_NUMBER"
+echo "PIN entered is: $PIN_NUMBER"
