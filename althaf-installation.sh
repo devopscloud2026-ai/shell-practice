@@ -27,13 +27,13 @@ else
 fi
 
 
-    dnf install mongodb-mongosh -y
+    dnf install mongodb-org -y
 
 if [ $? -ne 0 ]; then
-    echo "ERROR :: Installing mongodb-mongosh is failure"
+    echo "ERROR :: Installing mongodb-org is failure"
     exit 1
 else
-    echo "Installing mongodb-mongosh is success"
+    echo "Installing mongodb-org is success"
 fi
 
     
