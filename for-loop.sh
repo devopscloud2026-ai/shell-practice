@@ -32,7 +32,7 @@ VALIDATE(){
         dnf list installed $package &>>$LOG_FILE
 
     if [ $? -ne 0 ]; then
-        dnf install $Package -y &>>$LOG_FILE
+        dnf install $Package &>>$LOG_FILE
         VALIDATE $? "$Package"
     else
         echo -e "$Package already installed...$Y SKIPPING $N"
