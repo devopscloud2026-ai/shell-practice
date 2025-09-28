@@ -27,13 +27,13 @@ else
 fi
 
 
-    dnf install mongodb-org -y
+    dnf install python3 -y
 
 if [ $? -ne 0 ]; then
-    echo "ERROR :: Installing mongodb-org is failure"
+    echo "ERROR :: Installing python3 is failure"
     exit 1
 else
-    echo "Installing mongodb-org is success"
+    echo "Installing python3 is success"
 fi
 
     
