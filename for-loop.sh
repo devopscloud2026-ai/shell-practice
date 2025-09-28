@@ -27,18 +27,18 @@ VALIDATE(){
     fi
     
 }
-       for Package in $@
-       do
-        dnf list installed $package &>>$LOG_FILE
+       for package in $@
+do
+    # check package is already installed or not
+    dnf list installed $package &>>$LOG_FILE
 
+    # if exit status is 0, already installed. -ne 0 need to install it
     if [ $? -ne 0 ]; then
-        dnf install $Package &>>$LOG_FILE
-        VALIDATE $? "$Package"
+        dnf install $package -y &>>$LOG_FILE
+        VALIDATE $? "$package"
     else
-        echo -e "$Package already installed...$Y SKIPPING $N"
+        echo -e "$package already installed ... $Y SKIPPING $N"
     fi
-       
-       done
-
+done
 
     
